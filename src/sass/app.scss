@@ -1,0 +1,377 @@
+@import "./police.scss";
+@import "./color.scss";
+
+//body
+*{
+    font-family: $manrope;
+}
+body{
+    margin : 0;
+}
+
+
+//text
+.text{
+    &-purple_fair{
+        color : $purple_fair !important;
+    }
+    &-light{
+        color : white !important;
+    }
+    &-center{
+        text-align : center !important;
+    }
+}
+
+.active{
+    color : $purple_fair !important;
+    border-bottom: $purple_fair solid 1px;
+}
+
+.list-item {
+    margin-right: 50px;
+    a{
+    color : black;
+    text-decoration : none;
+    padding : 5px;
+    }
+    a:hover{
+        color : $green_fair !important;
+        transition : .4s;
+    }
+}
+
+.fs-3{
+    font-size: 3rem;
+}
+.fw-bold{
+    font-weight: bold !important;
+}
+
+
+
+//Button
+.btn{
+    text-align:  center;
+    display : inline-block;
+    border : solid gray 1px;
+    border-radius : 50px 50px 50px 50px;
+    color : gray;
+    text-decoration : none;
+    font-size: 0.85rem;
+    width: 200px !important;
+    // min-width: auto;
+    cursor: pointer;
+    //btn-purple_fair
+    &-purple_fair{
+        border-color: #abaeed !important;
+        color : white !important;
+        background-image: linear-gradient(to bottom,#8f87b5,#abaeed);
+    }
+    &-purple_fair:hover{
+        border-color: #8788BA !important;
+        background-image: linear-gradient(to bottom,#696484,#8788BA);
+        transition : .5s;
+    }
+}
+
+
+//backgrouund
+.bg{
+    &-purple_dusky_2{
+        background-color: $purple_dusky_2;
+    }
+    &-purple_dusky{
+        background-color: $purple_dusky;
+    }
+    &-purple_fair{
+        background-color: $purple_fair;
+    }
+}
+
+//Img
+.img-fluid{
+    cursor: pointer;
+    // max-width: 100%;
+}
+.img-fluid:hover{
+    filter : brightness(20%);
+}
+.img-fluid:hover + p{
+    display : block;
+}
+
+//display
+.d-none{
+    display : none;
+}
+
+
+//border
+.border{
+    border : solid black 1px;
+    &-start-0{
+        border-left: none;
+    }
+    &-purple_fair{
+        border-color : $purple_fair !important;
+    }
+    &-top-0{
+        border-top : none;
+    }
+}
+
+//form
+form input[type="text"], form input[type="mail"], form textarea{
+    width: 100%;
+    margin-top : 1rem;
+    padding : 5px 0px 0px 5px;
+    border : 2px solid $purple_fair;
+}
+form input[type="text"], form input[type="mail"]{
+    height: 50px;
+}
+
+//table
+table{
+    border-collapse: collapse;
+    width: 100%;
+    th{
+        padding : 0.3rem;
+    }
+    td{
+        padding : 3rem;
+        width: 10%;
+    }
+    td, th{
+        border : solid 1px $purple_fair;
+    }
+}
+
+.about-body{
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+//container
+.row-reverse{
+    display : flex;
+    flex-direction: row-reverse;
+    gap : 200px;
+}
+.flex{
+    &-space-between{
+        display : flex;
+        justify-content: space-between;
+    }
+}
+.navbar-item{
+    list-style: none;
+}
+.row-3{
+    display : grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap : 20px;
+}
+.grid{
+    display : grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap : 0px;
+}
+.g{
+    &-0{
+        gap : 0px !important;
+    }
+    &-2{
+        gap : 30px;
+    }
+}
+.row-5{
+    display : grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap : 0.5rem;
+}
+.container{
+    max-width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+    padding : 3rem;
+}
+.container{
+    max-width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+    padding : 3rem;
+}
+.form-row{
+    display : grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: auto;
+}
+.form-row .full{
+    grid-column: 1/3;
+}
+
+//Margin padding
+.mb-2{
+    margin-bottom : 2rem;
+}
+.mb-3{
+    margin-bottom : 3rem;
+}
+.mb-5{
+    margin-bottom : 5rem;
+}
+.mt-3{
+    margin-top: 5rem;
+}
+.ms-5{
+    margin-left: 3rem;
+}
+.me-5{
+    margin-right: 3rem;
+}
+.p-1{
+    padding : 10px;
+}
+.p-2{
+    padding : .5rem;
+}
+.p-3{
+    padding : 1rem;
+}
+.p-4{
+    padding : 2rem;
+}
+.p-5{
+    padding : 3rem;
+}
+
+.position-relative{
+    position : relative;
+}
+
+.position-absolute{
+    position : absolute;
+}
+.top-50{
+    top: 50%;
+}
+
+.top-40{
+    top: 40%;
+}
+.top-70{
+    top : 70%;
+}
+
+.w-100{
+    width: 100%;
+}
+
+
+
+@media (width < 1220px){
+    //container
+    .container{
+        max-width: 870px;
+        margin-left: auto;
+        margin-right: auto;
+        padding : 3rem;
+    }
+    .row-reverse{
+        display : flex;
+        flex-direction: row-reverse;
+        gap : 100px;
+    }
+    .about-body{
+        width: auto;
+    }
+}
+
+//mid
+@media (width < 992px){
+    .container{
+        max-width: 680px;
+        margin-left: auto;
+        margin-right: auto;
+        padding : 3rem;
+    }
+    .img-md-robbie{
+        width: 300px;
+    }
+    .row-reverse{
+        display : flex;
+        flex-direction: row-reverse;
+        gap : 10px;
+        .position-absolute{
+            bottom : 20% !important;
+        }
+    }
+}
+//mediaQuery
+@media (max-width : 587px){
+    .list-item{
+        margin-top : 20px;
+    }
+    .img-fluid{
+        max-width: 100%;
+        height: auto;
+    }
+    table { 
+        td{
+            padding : 1rem;
+        }
+    }
+    .about-body{
+        width: auto;
+    }
+    .d-sm-none{
+        display : none;
+    }
+    //text
+    .fs-3{
+        font-size: 2em;
+    }
+
+    //container
+    .row-reverse{
+        display : flex;
+        flex-direction: column;
+        gap : 5px;
+    }
+    .flex-sm-column{
+        display : flex;
+        flex-direction : column;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .navbar-item{
+        list-style: none;
+    }
+    .row-3{
+        display : grid;
+        grid-template-columns: 1fr;
+        gap : 20px;
+    }
+    .container{
+        max-width: 537px;
+        margin-left: auto;
+        margin-right: auto;
+        padding : 1rem;
+    }
+    .form-row{
+        display : flex;
+        flex-direction: column;
+        grid-row: auto;
+    }
+    .flex-row{
+        display : flex;
+        flex-direction: column;
+    }
+    .row-5{
+        grid-template-columns: 1fr 1fr;
+    }
+}
